@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/index.css" />
     <link rel="stylesheet" href="/assets/css/common.css" />
     <link rel="stylesheet" href="/assets/font/fonts.css" />
-<!-- <link rel="stylesheet" href="../assets/css/button.css"/> -->
+    <!-- <link rel="stylesheet" href="../assets/css/button.css"/> -->
     <script src="/assets/js/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/semantic.js"></script>
     <!-- <link rel="stylesheet" href="{{ " /assets/main.css" | relative_url }}"> -->
@@ -21,6 +21,84 @@
     {% include KaTeX.html %}
     {% include highlightjs.html %}
     <!-- {% include fontawesome.html %} -->
+    <style>
+        .btn-shine {
+            /* position: absolute; */
+            /* top: 50%; */
+            /* left: 50%; */
+            /* transform: translate(-50%, -50%); */
+            /* padding: 12px 48px; */
+            /* z-index: 999999; */
+            /* color: #fff; */
+            background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
+            background-position: 0;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine1 2s infinite cubic-bezier(1, 0.62, 0, 0.46);
+            animation-fill-mode: forwards;
+            -webkit-text-size-adjust: none;
+            font-size: 16px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        @-moz-keyframes shine1 {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 180px;
+            }
+
+            100% {
+                background-position: 180px;
+            }
+        }
+
+        @-webkit-keyframes shine1 {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 180px;
+            }
+
+            100% {
+                background-position: 180px;
+            }
+        }
+
+        @-o-keyframes shine1 {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 180px;
+            }
+
+            100% {
+                background-position: 180px;
+            }
+        }
+
+        @keyframes shine1 {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 180px;
+            }
+
+            100% {
+                background-position: 180px;
+            }
+        }
+    </style>
 </head>
 
 <body>
