@@ -8,6 +8,8 @@
 {% if page.image %}
 <meta property="og:image" content="{{ site.url }}{{ page.image }}">
 {% else %}
+<meta property="og:image" content="{{ post.thumbnail | relative_url }}">
+{% else %}
  <meta property="og:image" content="{{ site.url }}{{ site.image_default }}">
 {% endif %}
 
