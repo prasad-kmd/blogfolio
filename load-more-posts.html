@@ -1,0 +1,46 @@
+---
+layout: null
+permalink: /load-more-posts
+---
+{% assign page_num = page.page | default: 1 | plus: 0 %}
+{% assign offset = page_num | minus: 1 | times: 6 %}
+{% for post in site.posts limit:6 offset:offset %}
+  <div class="ui centered raised link card">
+    <div class="sixteen-by-nine">
+      {% if post.image %}
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+      {% else %}
+        {% assign images = post.content | split: '<img ' %}
+        {% assign imageFound = false %}
+        {% for image in images %}
+          {% if image contains 'src="' and imageFound == false %}
+            {% assign src = image | split: 'src="' | last | split: '"' | first %}
+            {% if src contains 'http' or src contains '/' %}
+              <img src="{{ src }}" alt="{{ post.title }}">
+              {% assign imageFound = true %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% if imageFound == false %}
+          <img src="{{ '/assets/images/placeholder.jpg' | relative_url }}" alt="Placeholder">
+        {% endif %}
+      {% endif %}
+    </div>
+    <div class="content" style="text-align: center;">
+      <div class="header">{{ post.title | truncate: 50 }}</div>
+    </div>
+    <div class="content" style="text-align: center;">
+      <div class="description">{{ post.excerpt | strip_html | truncate: 150 }}</div>
+    </div>
+    <div class="extra content" style="text-align: left;">
+      <span><i class="calendar icon"></i> {{ post.date | date: "%Y/%m/%d" }}</span>
+    </div>
+    <div class="extra content" style="text-align: left;">
+      <span><i class="user icon"></i> {{ post.author | default: site.author }}</span>
+    </div>
+    <div class="ui secondary bottom attached button" onclick="window.open('{{ post.url | relative_url }}', '_blank')">
+      <i class="external square alternate icon"></i>Read More
+    </div>
+  </div>
+{% endfor %}
+

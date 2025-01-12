@@ -1,0 +1,6 @@
+- name: "Product 1"
+  description: "Description of product 1."
+  url: "https://product1.com"
+- name: "Product 2"
+  description: "Description of product 2."
+  url: "https://product2.com"

@@ -1,0 +1,51 @@
+---
+layout: default
+title: Blog
+---
+<div class="ui segment">
+<div class="ui container">
+    <div class="ui four stackable cards" id="post-list">
+      {% for post in site.posts %}
+        <div class="ui centered raised card">
+          <div class="sixteen-by-nine">
+            {% if post.thumbnail %}
+              <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}">
+            {% elsif post.image %}
+              <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+            {% else %}
+              {% assign images = post.content | split: '<img ' %}
+              {% assign imageFound = false %}
+              {% for image in images %}
+                {% if image contains 'src="' and imageFound == false %}
+                  {% assign src = image | split: 'src="' | last | split: '"' | first %}
+                  {% if src contains 'http' or src contains '/' %}
+                    <img src="{{ src }}" alt="{{ post.title }}">
+                    {% assign imageFound = true %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+              {% if imageFound == false %}
+                <img src="{{ '/assets/img/svg/720x480.svg' | relative_url }}" alt="Placeholder">
+              {% endif %}
+            {% endif %}
+          </div>
+          <div class="content" style="text-align: center;">
+            <div class="header">{{ post.title | truncate: 50 }}</div>
+          </div>
+          <div class="content" style="text-align: center;">
+            <div class="description">{{ post.excerpt | strip_html | truncate: 150 }}</div>
+          </div>
+          <div class="extra content" style="text-align: left;">
+            <span><i class="calendar icon"></i> {{ post.date | date: "%Y/%m/%d" }}</span>
+          </div>
+          <div class="extra content" style="text-align: left;">
+            <span><i class="user icon"></i> {{ post.author | default: site.author }}</span>
+          </div>
+          <div class="ui secondary bottom attached button" onclick="window.location.href='{{ post.url | relative_url }}'" >
+            <i class="external square alternate icon"></i>Read More
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

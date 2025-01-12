@@ -1,0 +1,86 @@
+---
+layout: home
+title: Home
+---
+<!-- Personal Information Section -->
+<div class="ui segments">
+    <section class="ui inverted segment asc3">
+        <h2 class="ui header">Welcome to My Blog!</h2>
+        <p>
+            <span style="font-size: 1.5em;font-family: Neuropol;">I'</span>m a Mechatronics Engineering student with a passion for pushing the boundaries of technology.<br />
+                I'm currently reading for a BSc (Hons) Engineering Specialized in Mechatronics Engineering at the Open University of Sri Lanka.<br />
+            This website is my digital playground – a space where I can showcase my projects, explore my interests, and share my learning journey.<br/>
+            My projects reflect my growing understanding of how mechanical, electrical, and software engineering principles converge to create innovative solutions.<br/>
+            Beyond my projects, I'm eager to learn and grow. <br/>
+            This website serves as a platform for me to document my experiences, share my insights, and connect with other tech enthusiasts. <br/>
+            I believe in the power of continuous learning and collaboration, and I'm excited to see where my journey in Mechatronics Engineering takes me."
+        </p>
+    </section>
+    <div class="ui horizontal segments">
+        <div class="ui segment asc1">
+            <img class="ui middle aligned large image" src="assets/img/svg/banner.svg" alt="Typing SVG" />
+        </div>
+        <div class="ui segment">
+            <div id="weather" class="ui orange fluid card">
+                <div class="content asc1">
+                    <div class="header">Weather</div>
+                    <div class="description">
+                        <p id="city"></p>
+                        <p id="temperature"></p>
+                    </div>
+                </div>
+            </div>
+            <script src="assets/js/components/weather.js"></script>
+        </div>
+        <div class="ui segment">
+            <div id="ipWidget" class="ui card fluid green"></div>
+            <script src="assets/js/components/ipconfig.js"></script>
+        </div>
+    </div>
+</div>
+
+<div class="ui message" id="advice-message">
+    <i class="close icon"></i>
+    <div class="header">Advice of the Day</div>
+    <div class="content">
+        <div id="advice-text">
+            <div class="ui placeholder">
+                <div class="header">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/components/advice.js"></script>
+<script>$('.message .close')
+        .on('click', function () {
+            $(this)
+                .closest('.message')
+                .transition('fade')
+                ;
+        })
+        ;
+</script>
+
+<!-- Latest Posts Section -->
+<section class="ui segment">
+    <h3 class="ui dividing header">Latest Posts from PrasadM's Blog<i class="blogger icon"></i></h3>
+    <div id="latest-posts-pm-blogger" class="ui stackable grid"></div>
+</section>
+<script src="assets/js/index.js"></script>
+
+<!-- <section class="ui segment">
+    <div class="ui divided items">
+        {% for post in site.posts %}
+        <div class="item">
+            <div class="content">
+                <a class="header" href="{{ post.url }}">{{ post.title }}</a>
+                <div class="meta">{{ post.date | date: "%B %d, %Y" }}</div>
+                <div class="description">{{ post.excerpt }}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section> -->
+
