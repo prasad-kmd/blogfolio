@@ -1,0 +1,25 @@
+<!-- _includes/meta_page.html -->
+
+<!-- Open Graph (Facebook, LinkedIn etc.) -->
+<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 20 }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:type" content="website">
+{% if page.image %}
+<meta property="og:image" content="{{ site.url }}{{ page.image }}">
+{% else %}
+ <meta property="og:image" content="{{ site.url }}{{ site.image_default }}">
+{% endif %}
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 20 }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+{% if page.image %}
+<meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+{% else %}
+ <meta name="twitter:image" content="{{ site.url }}{{ site.image_default }}">
+{% endif %}
