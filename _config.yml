@@ -21,16 +21,16 @@
 title: PrasadM's Blog
 email: prasad.madhuranga@pm.me
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  PRASAD MADHURANGA'S OFFICIAL BLOGFOLIO WEBSITE which provides you information about him and his Blog posts. Categories:Web Developer,Web Designer,Content Writer,Blog Writer,Photographer,Draughtsperson,Graphic Designer, Author: Prasad Madhuranga, Designer: PRASAD.KMD™ 2025 , PRASAD.KMD™ - INFINTY IMAGINATION WITH SINHAGIRI™ VISUAL STUDIO
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://prasad-blog.vercel.app/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: prasadmadhuran1
 github_username:  prasad-kmd
+image_default: /assets/img/webp/WEB_LOGO01_PM.webp # path to your default image
+author: Prasad Madhuranga # author name
 
-paginate: 5  # Number of posts per page
-paginate_path: "blog/page:num/" # URL format for pagination
+#paginate: 5  # Number of posts per page
+#paginate_path: "blog/page:num/" # URL format for pagination
 
 # Build settings
 # theme: minima
