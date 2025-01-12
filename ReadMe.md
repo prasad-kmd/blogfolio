@@ -221,3 +221,9 @@ Contributions are welcome! Please fork the repository and create a pull request 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Credits
+
+- [Pixabay](https://pixabay.com/) for Background Video
+- [Font-Awesome-Pro](https://github.com/AquaWolf04/font-awesome-pro) for Icons
+- [Typing SVG](https://github.com/DenverCoder1/readme-typing-svg) for Home Page Typing SVG
