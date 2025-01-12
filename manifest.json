@@ -107,25 +107,25 @@
   ],
   "screenshots": [
     {
-      "src": "assets/img/screenshot/Screenshot.index.webp",
-      "sizes": "1280x720",
+      "src": "assets/img/scrnsht/index1.webp",
+      "sizes": "2880x2880",
       "type": "image/webp",
       "form_factor": "wide",
       "label": "Index screen of Prasad Madhuranga's Webpage"
     },
     {
-      "src": "assets/img/screenshot/Screenshot.en.home.webp",
-      "sizes": "1280x720",
+      "src": "assets/img/scrnsht/blog_.webp",
+      "sizes": "2880x2880",
       "type": "image/webp",
       "form_factor": "wide",
-      "label": "Homescreen of Prasad Madhuranga's Webpage in English"
+      "label": "BlogPage of Prasad Madhuranga's Webpage in English"
     },
     {
-      "src": "assets/img/screenshot/Screenshot.si.home.webp",
-      "sizes": "1280x720",
+      "src": "assets/img/scrnsht/enabling-latex-support-using-katex.html.webp",
+      "sizes": "2880x2880",
       "type": "image/webp",
       "form_factor": "wide",
-      "label": "Homescreen of Prasad Madhuranga's Webpage in Sinhala"
+      "label": "One of Blog Post"
     }
   ],
   "display_override": [
@@ -143,7 +143,7 @@
   "dir": "ltr",
   "scope_extensions": [
     {
-      "origin": "*.prasad-kmd.vercel.app"
+      "origin": "*.prasad-blog.vercel.app"
     }
   ]
 }
